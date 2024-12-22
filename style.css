@@ -2,8 +2,9 @@
 :root {
     --ash-gray: #B2BEB5;  /* Ash Gray arka plan */
     --black: #000000;     /* Siyah yazılar */
-    --gold: #FFD700;      /* Altın sarısı vurgular */
-    --white: #FFFFFF;     /* Beyaz yazılar */
+    --bordo: #6d0d0d;      /* Altın sarısı vurgular */
+    --white: #FFFFFF; 
+    --begie: #babab2;     /* Beyaz yazılar */
 }
 
 body {
@@ -15,13 +16,11 @@ body {
     color: var(--white);
     background: var(--ash-gray); /* Arka plan Ash Gray */
 }
-/* Header Ayarları */
 .header {
-    background: var(--ash-gray); /* Altın sarısı arka plan */
+    background: var(--black); /* Siyah arka plan */
     padding: 10px 20px;
 }
 
-/* Menü için Flexbox */
 .menu {
     display: flex;
     justify-content: space-between; /* Sola ve sağa hizalama */
@@ -31,55 +30,33 @@ body {
     padding: 0;
 }
 
-/* Logo (Sol Taraf) */
-.logo {
-    margin-right: auto; /* Menü öğelerini sağa iter */
-}
-
+/* Sol Taraftaki Logo */
 .logo a {
     text-decoration: none;
-    color: var(--white); /* Beyaz yazılar */
+    color: var(--begie); /* Sol taraftaki yazı için altın sarısı */
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-/* Menü Öğeleri (Sağ Taraf) */
+.logo a:hover {
+    color: var(--ash-gray); /* Hover durumunda beyaz */
+}
+
+/* Sağ Taraftaki Menü Öğeleri */
 .menu-items {
     display: flex;
-    gap: 20px; /* Menü öğeleri arasında boşluk */
+    gap: 20px; /* Menü öğeleri arası boşluk */
 }
 
 .menu-items li a {
     text-decoration: none;
-    color: var(--white); /* Beyaz yazılar */
+    color: var(--bordo); /* Sağ taraftaki öğeler için kırmızı */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .menu-items li a:hover {
-    color: var(--black); /* Hover durumunda siyah */
-}
-
-/* Header Section */
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-}
-
-.header nav ul li a {
-    text-decoration: none;
-    color: var(--white); /* Beyaz yazılar */
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
-
-.header nav ul li a:hover {
-    color: var(--black); /* Hover durumunda siyah */
+    color: var(--ash-gray); /* Hover durumunda altın sarısı */
 }
 
 /* Hero Section */
