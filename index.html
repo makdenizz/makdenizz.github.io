@@ -9,14 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
     <!-- Header -->
     <header>
+
         <nav>
             <!-- Sol Menü -->
             <ul class="left-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#academic-journey">Education</a></li>
+                <li><a href="#skills-section">Skills</a></li>
             </ul>
     
             <!-- Orta Başlık -->
@@ -24,8 +31,8 @@
     
             <!-- Sağ Menü -->
             <ul class="right-menu">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#career-section">Contact</a></li>
                 <li><a href="#language">EN</a></li>
             </ul>
         </nav>
@@ -37,14 +44,14 @@
         <div class="hero-content">
             <h2>Student in <br> Computer Science</h2>
             <div class="hero-buttons">
-                <a href="#about" class="btn">About me</a>
-                <a href="#cv" class="btn">Get my CV</a>
+                <a href="#skills-section" class="btn">About me</a>
+                <a href="assets\pdf\Mustafa_Akdeniz_Resume.pdf" class="btn" download>Get my CV</a>
             </div>
         </div>
     </section>
     <section class="transition-section"></section>
 
-    <section class="about-section">
+    <section id= "about-section" class="about-section">
         <div class="about-content">
             <!-- Sol Kısım: Yazılar ve Butonlar -->
             <div class="about-text">
@@ -63,9 +70,8 @@
                     constantly learning and growing.
                 </p>
                 <div class="about-buttons">
-                    <a href="#formation" class="btn">See my Formation</a>
-                    <a href="https://github.com" target="_blank"><img src="assets\images\github\github-mark-white.png" alt="GitHub"></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="assets\images\linkedin\LI-In-Bug.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/makdenizz" target="_blank"><img src="assets\images\github\github-mark-white.png" alt="GitHub"></a>
+                    <a href="www.linkedin.com/in/mustafa-akdeniz-" target="_blank"><img src="assets\images\linkedin\LI-In-Bug.png" alt="LinkedIn"></a>
                 </div>
             </div>
 
@@ -79,14 +85,14 @@
     <section class="transition-section"></section>
 
     <!-- Academic Journey Section -->
-    <section class="academic-journey">
+    <section id="academic-journey" class="academic-journey">
         <div class="section-title">
             <h2>Let’s go through my <br><span>Academic journey.</span></h2>
         </div>
         <div class="journey-cards">
             <!-- İlk Kutu -->
             <div class="journey-card">
-                <img src="assets/images/tubitak-project.jpg" alt="TUBITAK Project">
+                <img src="assets\images\tubitak.JPG" alt="TUBITAK Project">
                 <div class="card-text">
                     <p>2020</p>
                     <h3>TUBITAK Project</h3>
@@ -94,7 +100,7 @@
             </div>
             <!-- İkinci Kutu -->
             <div class="journey-card">
-                <img src="assets/images/teknofest-project.jpg" alt="TEKNOFEST Project">
+                <img src="assets\images\teknofest.JPG" alt="TEKNOFEST Project">
                 <div class="card-text">
                     <p>2021</p>
                     <h3>TEKNOFEST Project</h3>
@@ -102,7 +108,7 @@
             </div>
             <!-- Üçüncü Kutu -->
             <div class="journey-card">
-                <img src="assets/images/koc-university.jpg" alt="KOÇ University">
+                <img src="assets\images\koc.JPG" alt="Koç University">
                 <div class="card-text">
                     <p>2022</p>
                     <h3>KOÇ University</h3>
@@ -115,7 +121,7 @@
 <!-- Skills Section -->
 <section class="transition-section"></section>
 
-<section class="skills-section">
+<section id="skills-section" class="skills-section">
     <div class="skills-title">
         <h2>
             Explore all my skills in 
@@ -151,7 +157,7 @@
 <section class="transition-section"></section>
 
 <!-- Projects Section -->
-<section class="projects-section">
+<section id="projects-section" class="projects-section">
     <div class="projects-title">
         <h2>
             Discover my recents projects of 
@@ -167,54 +173,50 @@
 <section class="transition-section"></section>
 
 <!-- Career Opportunity Section -->
-<section class="career-section">
+<section id="career-section" class="career-section">
     <div class="career-content">
         <div class="career-text">
             <h2>Have Any Career Opportunity in Mind?</h2>
             <p>Feel free to contact me or just say a friendly hello!</p>
         </div>
         <div class="career-button">
-            <a href="#contact" class="contact-btn">Contact Me</a>
+            <a href="mailto:makdeniz22@ku.edu.tr" class="contact-btn">Contact Me</a>
         </div>
     </div>
 </section>
+
 <footer class="footer">
-    <!-- Rectangle Background -->
-    <div class="footer-background"></div>
+    <!-- Sol Üst: İsim -->
+    <div class="footer-left">
+        <h2 class="footer-name">Mustafa Akdeniz</h2>
+    </div>
 
-    <!-- Footer Content -->
-    <div class="footer-content">
-        <div class="footer-info">
-            <!-- Name Section -->
-            <h2 class="footer-name">Mustafa Akdeniz</h2>
+    <!-- Ortada: Information -->
+    <div class="footer-center">
+        <h3 class="footer-title">Information</h3>
+        <ul class="footer-info">
+            <li class="info-item">+90 553 301 07 26</li>
+            <li class="info-item">makdeniz22@ku.edu.tr</li>
+            <li class="info-item">Istanbul/Turkey</li>
+        </ul>
+    </div>
 
-            <!-- Contact Info -->
-            <div class="info-links">
-                <div class="info">
-                    <h3 class="info-title">Information</h3>
-                    <p class="info-item">+90 553 301 0726</p>
-                    <p class="info-item">makdeniz316@gmail.com</p>
-                    <p class="info-item">makdeniz22@ku.edu.tr</p>
-                    <p class="info-item">Istanbul, Turkey</p>
-                </div>
-                <div class="social">
-                    <h3 class="social-title">Social Media</h3>
-                    <p class="social-item">GitHub</p>
-                    <p class="social-item">Linkedin</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Line Separator -->
-        <div class="footer-line"></div>
-
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p class="copyright">Copyright ©2024</p>
-        </div>
+    <!-- Sağda: Social Media -->
+    <div class="footer-right">
+        <h3 class="footer-title">Social Media</h3>
+        <ul class="footer-social">
+            <li><a href="https://github.com/makdenizz" class="social-link" target="_blank">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/mustafa-akdeniz-" class="social-link" target="_blank">LinkedIn</a></li>
+        </ul>
     </div>
 </footer>
 
+
+    <!-- Scroll to Top Button -->
+    <div id="scrollToTop" class="scroll-button" onclick="scrollToHero()">
+        ↑
+    </div>
+    <script src="script.js"></script>
 
 </body>
 </html>
