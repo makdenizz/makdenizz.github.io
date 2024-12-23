@@ -1,3 +1,4 @@
+// Scroll to Top Butonunu Göster/Gizle
 const scrollToTopButton = document.getElementById("scrollToTop");
 let scrollTimeout;
 
@@ -8,8 +9,8 @@ window.addEventListener("scroll", () => {
     // Kaydırma durduktan sonra butonu göster
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
-        if (window.scrollY > 200) {
-            scrollToTopButton.classList.add("show"); // Kaydırma 200px'den fazla olursa buton görünür
+        if (window.scrollY > 200) { // Eğer 200px'den fazla kaydırılırsa
+            scrollToTopButton.classList.add("show");
         }
     }, 300); // Kaydırma durduktan 300ms sonra buton gösterilecek
 });
