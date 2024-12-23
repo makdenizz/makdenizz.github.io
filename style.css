@@ -1,248 +1,205 @@
-/* Global Styles */
-:root {
-    --ash-gray: #B2BEB5;  /* Ash Gray arka plan */
-    --black: #000000;     /* Siyah yazılar */
-    --brown: #403403;      /* Altın sarısı vurgular */
-    --white: #FFFFFF; 
-    --begie: #babab2;     /* Beyaz yazılar */
-    --hardal: #f2d879; 
-    --hardal_buton: #5e4e14; 
-    --brown_dark: #362c04;
-    --hardal_soft: #f5e199; 
-    --brown_darker: #292103;
-    --haki: #034d0d;
-}
-
-body {
-    font-family: Arial, sans-serif;
+/* Genel Ayarlar */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 1.6;
-    color: var(--white);
-    background-color: #F2D879;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(180,768,365)'%3E%3Cstop offset='0' stop-color='%23F2D879'/%3E%3Cstop offset='1' stop-color='%23362C04'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='1261' height='1050.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover; /* Üç renkli geçiş */ /* Arka plan Ash Gray */
-}
-.header {
-    position: fixed; /* Header'ı sabitler */
-    top: 0; /* Header'ı sayfanın üst kısmına yerleştirir */
-    left: 0; /* Sol tarafa hizalar */
-    width: 100%; /* Header'ın tüm genişliği kaplamasını sağlar */
-    z-index: 1000; /* Diğer elementlerin üzerinde kalmasını sağlar */
-    background: #000000; /* Arka plan rengi (örnek: siyah) */
-    color: var(--hardal); /* Yazı rengi (örnek: altın sarısı) */
-    padding: 10px 20px; /* İç boşluk */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
 }
 
-.menu {
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Siyah zemin */
+    color: #FFFFFF; /* Beyaz yazılar */
+    overflow-x: hidden; /* Yatay taşmaları gizle */
+}
+
+/* Header */
+header {
     display: flex;
-    justify-content: space-between; /* Sola ve sağa hizalama */
-    align-items: center;            /* Dikey merkezleme */
+    justify-content: space-between; /* Sol ve sağ grupları ayır */
+    align-items: center; /* Dikey hizalama */
+    padding: 33.27px 60.2px;
+}
+
+header ul {
     list-style: none;
+    display: flex; /* Menü elemanlarını yatay hizala */
+    gap: 30px; /* Elemanlar arası boşluk */
     margin: 0;
     padding: 0;
 }
 
-/* Sol Taraftaki Logo */
-.logo a {
-    text-decoration: none;
-    color: var(--hardal); /* Sol taraftaki yazı için altın sarısı */
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-
-/* Sağ Taraftaki Menü Öğeleri */
-.menu-items {
+/* Sol Menü */
+header ul.left-menu {
+    margin-right: auto;
+    list-style: none;
     display: flex;
-    gap: 20px; /* Menü öğeleri arası boşluk */
+    gap: 30px; /* Sol menü elemanları arası boşluk */
+    margin: 0;
+    padding: 0;
 }
 
-.menu-items li a {
+/* Sağ Menü */
+header ul.right-menu {
+    list-style: none;
+    display: flex; /* Yatay hizala */
+    gap: 30px; /* Elemanlar arası boşluk */
+    margin: 0;
+    padding: 0;
+    position: absolute; /* Sağ tarafa sabitle */
+    top: 33.27px; /* Dikey hizalama */
+    right: 60.2px; /* Sağdan boşluk */
+}
+
+/* Menü Linkleri */
+header ul li a {
     text-decoration: none;
-    color: var(--hardal); /* Sağ taraftaki öğeler için kırmızı */
-    font-weight: bold;
+    font-size: 19.01px;
+    font-weight: 600; /* Poppins Semibold */
+    color: #FFFFFF;
     transition: color 0.3s ease;
 }
 
-.menu-items li a:hover {
-    color: var(--hardal_buton); /* Hover durumunda altın sarısı */
+header ul li a:hover {
+    color: #007BFF; /* Hover durumunda mavi renk */
 }
+
+/* Orta Başlık */
+header h1 {
+    font-size: 24px;
+    font-weight: 600; /* Poppins Semibold */
+    position: absolute;
+    left: 50%; /* Ortala */
+    transform: translateX(-50%); /* Tam ortalama */
+    top: 41px; /* Yükseklik hizalaması */
+}
+
+
 
 /* Hero Section */
-.hero-section {
-    background-color: #F2D879;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(0,768,365)'%3E%3Cstop offset='0' stop-color='%23F2D879'/%3E%3Cstop offset='1' stop-color='%23362C04'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='1261' height='1050.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;/* SVG dosyasının yolu */
-    height: 100vh; /* Hero Section'un yüksekliği tüm ekranı kaplar */
-    display: flex; /* Flexbox kullanımı */
-    justify-content: center; /* Yatayda merkezleme */
-    align-items: center; /* Dikeyde merkezleme */
-    flex-direction: column; /* Yazılar üst üste gelsin */
-    color: var(--brown); /* Siyah yazılar */
+#hero {
     text-align: center;
-
+    padding: 217.04px 0; /* Üstten boşluk */
 }
 
-.hero-section h1 {
-    font-size: 4rem; /* Başlık boyutu */
-    margin-bottom: 10px;
-    font-weight: bold;
+#hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 113.27px;
+    font-weight: 600; /* Semibold */
+    line-height: 1.2;
 }
 
-.hero-section p {
-    font-size: 2rem; /* Alt yazı boyutu */
-    margin-bottom: 30px;
-    font-weight: 300;
+.hero-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Butonlar arasındaki boşluk */
 }
 
-.hero-section .btn {
-    background: var(--hardal_buton); /* Siyah buton */
-    color: var(--hardal_soft); /* Altın sarısı yazı */
+.hero-buttons .btn {
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19.01px;
+    font-weight: 600;
+    color: #FFFFFF;
     padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, color 0.3s ease;
+    border: 2px solid #FFFFFF;
+    border-radius: 39.61px;
+    transition: all 0.3s ease;
 }
 
-.hero-section .btn:hover {
-    background: var(--hardal_buton); /* Hover: Altın sarısı arka plan */
-    color: var(--hardal); /* Siyah yazılar */
+.hero-buttons .btn:hover {
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
+/* Geçiş Bölümü */
+.transition-section {
+    width: 1504.1px;
+    height: 272.68px;
+    background-color: #000000; /* Siyah geçiş */
+    margin: 0 auto; /* Ortala */
+}
 
 /* About Section */
 .about-section {
-    color: var(--hardal);         /* Beyaz yazılar */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-/* Projects Section */
-.projects-section {
-    color: var(--hardal_soft);         /* Beyaz yazılar */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.projects-section h2 {
-    font-size: 2.5rem;
-    color: var(--hardal_soft);          /* Altın sarısı başlık */
-    margin-bottom: 20px;
-}
-
-.project-list {
+    width: 1378px;
+    height: 634px;
+    margin: 50px auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
-.project-item {
-    background: var(--hardal);     /* Altın sarısı kartlar */
-    color: var(--haki);         /* Siyah yazılar */
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.project-item h3 {
-    margin-bottom: 10px;
+/* Sol Kısım */
+.about-text {
+    width: 770px;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
-.project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.about-text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-/* Footer Section */
-.footer {
-    color: var(--brown);     /* Siyah yazılar */
-    text-align: center;
-    padding: 20px;
+.about-text p {
+    margin-bottom: 15px;
 }
 
-.footer h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.about-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-.footer a {
-    color: var(--brown); /* Siyah bağlantılar */
+.about-buttons .btn {
+    padding: 10px 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.about-buttons img {
+    width: 39px; /* Genişlik */
+    height: 38px; /* Yükseklik */
+    object-fit: cover; /* Görüntüyü doğru şekilde sığdırır */
+    transition: transform 0.3s ease; /* Hover için büyütme efekti */
 }
 
-.footer a:hover {
-    color: var(--hardal); /* Hover durumunda beyaz */
+.about-buttons img:hover {
+    transform: scale(1.1); /* Hover durumunda hafif büyütme */
 }
 
-/* Sosyal Linkler */
-.social-links {
-    position: absolute;
-    top: 50%; /* Ekranın ortasına hizala */
-    left: 20px; /* Soldan boşluk bırak */
-    transform: translateY(-50%); /* Tam ortalama için */
+
+.about-buttons .btn:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Sağ Kısım */
+.about-photo {
+    width: 542px;
+    height: 614px;
     display: flex;
-    flex-direction: column; /* Logoları dikey sıralar */
-    gap: 10px; /* Logolar arasında boşluk */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.social-links img {
-    width: 40px; /* Logo boyutu */
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.social-links img:hover {
-    transform: scale(1.2); /* Hover durumunda büyütme */
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 5px 10px; /* Mobilde daha az boşluk */
-    }
-
-    .menu {
-        font-size: 0.9rem; /* Yazı boyutunu küçült */
-    }
-}
-.logo {
-    display: flex; /* Yatayda ikon ve yazıyı yan yana hizalar */
-    align-items: center; /* Dikey hizalamayı etkinleştirir (önceden bir denge sağlar) */
-    gap: 10px; /* İkon ve yazı arasındaki boşluk */
-}
-
-.logo-icon {
-    width: 35px; /* İkonun genişliği */
-    height: 35px; /* İkonun yüksekliği */
-    border-radius: 50%; /* Yuvarlak şekil */
-    object-fit: cover; /* Görseli düzgünce sığdırır */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-}
-
-.logo-icon:hover {
-    transform: scale(1.1);
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
