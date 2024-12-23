@@ -24,9 +24,15 @@ body {
     overflow-x: hidden; /* Yatay taşmaları gizle */
     margin: 0;
 }
-
-
-/* Header */
+/* Header - Ana Stiller */
+header {
+    width: 100%;
+    background-color: transparent; /* veya istediğiniz renk */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
 header nav {
     display: flex;
@@ -36,66 +42,52 @@ header nav {
     width: 100%;
 }
 
-/* Menü Elemanları */
-header ul {
-    list-style: none;
-    display: flex; /* Menü elemanlarını yatay hizala */
-    gap: 30px; /* Elemanlar arası boşluk */
+/* Sol menüdeki Mustafa Akdeniz yazısı */
+.site-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
     margin: 0;
-    padding: 0;
 }
-.left-menu, .right-menu {
-    list-style: none;
+
+/* Sağ menü */
+.nav-links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* Menü Linkleri */
-header ul li a {
+.nav-links a {
     text-decoration: none;
-    font-size: 19.01px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     color: #FFFFFF;
     transition: color 0.3s ease;
 }
 
-header ul li a:hover {
-    color: #007BFF; /* Hover durumunda mavi renk */
+.nav-links a:hover {
+    color: #007BFF; /* veya istediğiniz hover rengi */
 }
 
-/* Orta Başlık */
-header h1 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-    /* position: absolute yerine flex kullanımı */
-    white-space: nowrap; /* Başlığın satır atlamasını engelle */
-    padding: 0 20px; /* Yanlardan biraz boşluk */
+/* Hamburger menü başlangıçta gizli */
+.menu-toggle {
+    display: none;
 }
 
-/* Mobil Cihazlar için Responsive */
 @media (max-width: 768px) {
-    /* Header düzenini dikey yapalım */
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px; /* Daha az boşluk */
+    header nav {
+        padding: 15px 20px;
     }
 
-    /* Menü elemanları üst üste gelir */
-    header ul {
-        flex-direction: column;
-        gap: 15px;
+    .menu-toggle {
+        display: block;
     }
 
-    /* Orta başlık mobilde daha küçük olacak */
-    header h1 {
-        font-size: 20px; /* Küçük ekranlar için yazı boyutu */
-        position: relative; /* Orta başlık için daha esnek hizalama */
-        transform: translateX(0); /* Mobilde tam ortalanması için */
-        top: 10px;
+    .nav-links {
+        display: none;
     }
 }
 
@@ -143,25 +135,57 @@ header h1 {
     text-align: center;
 }
 
-/* Tablet ve küçük masaüstü ekranlar için */
-@media (max-width: 1024px) {
-    #hero {
-        padding: clamp(60px, 10vh, 150px) 20px;
-    }
-}
-
-/* Mobil ekranlar için */
+/* Mobil için özel tasarım (768px ve altı) */
 @media (max-width: 768px) {
+    #hero {
+        min-height: auto; /* Tam ekran yüksekliği yerine içeriğe göre */
+        padding: 40px 20px;
+        justify-content: flex-start;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #hero h2 {
+        font-size: 32px; /* Sabit font boyutu */
+        text-align: left; /* Sola yaslı */
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    #hero h2 br {
+        display: none; /* Satır sonlarını kaldır */
+    }
+
     .hero-buttons {
         flex-direction: column;
-        width: 100%;
-        max-width: 300px; /* Mobilde butonların maximum genişliği */
+        align-items: stretch;
+        gap: 15px;
+        margin-top: 30px;
+        padding: 0;
     }
 
     .hero-buttons .btn {
         width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+        border-radius: 25px;
     }
 }
+
+/* Orta boyutlu ekranlar için ara tasarım (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #hero {
+        padding: 80px 40px;
+    }
+    
+    #hero h2 {
+        font-size: 60px;
+    }
+}
+
 /* About Section */
 .about-section {
     width: 90%; /* Ekranın %90'ı kadar genişlik */
