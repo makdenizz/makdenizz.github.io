@@ -6,12 +6,27 @@
     <title>Akdeniz's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<script>
+    document.querySelector('.logo-link').addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+<body onload="showHeroSectionOnly()">
     <!-- Header -->
     <header class="header">
         <nav>
             <ul class="menu">
-                <li class="logo"><a href="#home">Mustafa Akdeniz</a></li>
+                <li class="logo">
+                    <a href="#" class="logo-link">
+                        <img src="assets\images\icons\img_2676_1 (3).png" alt="Logo Icon" class="logo-icon"> <!-- İkon -->
+                    </a>
+                    <a href="#home">Mustafa Akdeniz</a>
+                </li>
                 <div class="menu-items">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -21,6 +36,16 @@
             </ul>
         </nav>
     </header>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/mustafa-akdeniz-/" target="_blank">
+            <img src="assets\images\linkedin\LI-In-Bug.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/makdenizz" target="_blank">
+            <img src="assets\images\github\github-mark-white.png" alt="GitHub">
+        </a>
+    </div>
+    
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
