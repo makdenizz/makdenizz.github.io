@@ -1,3 +1,11 @@
+:root {
+    --black: #000000;     /* Siyah yazılar */
+    --gray: #888888;      /* Altın sarısı vurgular */
+    --white: #FFFFFF; 
+
+}
+
+
 /* Genel Ayarlar */
 * {
     margin: 0;
@@ -10,6 +18,39 @@ body {
     background-color: #000000; /* Siyah zemin */
     color: #FFFFFF; /* Beyaz yazılar */
     overflow-x: hidden; /* Yatay taşmaları gizle */
+    margin: 0;
+}
+/* Tablet cihazlar için (768px ve altı) */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* Menü üst üste gelir */
+        align-items: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem; /* Yazı boyutları küçülür */
+        text-align: center;
+    }
+
+    .about-photo img {
+        width: 80%; /* Fotoğraf boyutu küçülür */
+        margin: auto;
+    }
+}
+/* Mobil cihazlar için (480px ve altı) */
+@media (max-width: 480px) {
+    .left-menu, .right-menu {
+        display: none; /* Menüler gizlenir (Hamburger menü eklenebilir) */
+    }
+
+    .btn {
+        font-size: 1rem; /* Buton yazıları küçültülür */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Footer elemanları üst üste gelir */
+        align-items: center;
+    }
 }
 
 /* Header */
@@ -112,14 +153,22 @@ header h1 {
     color: #000000;
 }
 
-/* Geçiş Bölümü */
 .transition-section {
-    width: 1504.1px;
-    height: 272.68px;
-    background-color: #000000; /* Siyah geçiş */
-    margin: 0 auto; /* Ortala */
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    animation: slideIn 2s ease-in-out;
+    position: relative; /* Hareket için pozisyon belirleme */
 }
 
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Ekranın dışından başla */
+    }
+    to {
+        transform: translateX(0); /* Normal pozisyona gel */
+    }
+}
 /* About Section */
 .about-section {
     width: 1378px;
@@ -152,6 +201,7 @@ header h1 {
 
 .about-text p {
     margin-bottom: 15px;
+    color: #888888;
 }
 
 .about-buttons {
@@ -159,6 +209,7 @@ header h1 {
     display: flex;
     gap: 15px;
     align-items: center;
+    color: #888888;
 }
 
 .about-buttons .btn {
@@ -203,3 +254,305 @@ header h1 {
     object-fit: cover;
     border-radius: 10px;
 }
+
+
+/* Academic Journey Section */
+.academic-journey {
+    width: 1503px;
+    height: 754px;
+    margin: 50px auto;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Başlık */
+.academic-journey .section-title h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: var(--gray);
+}
+
+.academic-journey .section-title h2 span {
+    font-weight: bold;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+/* Kutu Bölmesi */
+.journey-cards {
+    display: flex;
+    justify-content: space-between; /* Kutular arasında eşit boşluk */
+    gap: 15px; /* Mobil uyumluluk için ek boşluk */
+}
+
+.journey-card {
+    width: 427px;
+    height: 520px;
+    background-color: #1A1A1A; /* Kutu arka planı */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.journey-card img {
+    width: 100%;
+    height: 70%; /* Resim alanı oranı */
+    object-fit: cover; /* Resmi kutuya sığdırır */
+}
+
+.journey-card .card-text {
+    padding: 10px;
+}
+
+.journey-card .card-text p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.journey-card .card-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 80px 27.5px; /* 80px üstten, 27.5px soldan ve sağdan boşluk */
+    text-align: center;
+    max-width: 1284px; /* Belirttiğiniz genişlik */
+    margin: 0 auto; /* Ortala */
+    color: #FFFFFF;
+}
+
+/* Başlık */
+.skills-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 47px; /* Başlık boyutu */
+    font-weight: 600;
+    color: #888888; /* Başlık rengi */
+    line-height: 1.5;
+}
+
+.skills-title h2 span {
+    color: #FFFFFF; /* Vurgulanan kısımların rengi beyaz */
+}
+
+/* Alt Yazılar */
+.skills-description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; /* Alt yazı boyutu */
+    line-height: 2;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center; /* Metin düzenleme */
+    color: #FFFFFF; /* Yazı rengi */
+}
+
+
+/* Projects Section */
+.projects-section {
+    width: 1229px; /* Section genişliği */
+    height: 160px; /* Section yüksekliği */
+    margin: 0 auto; /* Ortala */
+    text-align: center;
+    position: relative;
+    color: #FFFFFF;
+    padding: 0 137.55px; /* Sağ ve sol boşluklar */
+}
+
+/* Başlık */
+.projects-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; /* Başlık boyutu */
+    font-weight: 600;
+    line-height: 1.5;
+    color: #888888; /* Genel başlık rengi */
+    margin: 10px 0; /* Başlık üst ve alt boşluk */
+}
+
+.projects-title h2 span {
+    color: #FFFFFF; /* Vurgulanan kısımların rengi beyaz */
+    font-style: italic; /* Eğik yazı */
+}
+/* 'and' Kelimesi */
+.projects-title h2 .and-word {
+    display: block; /* 'and' kelimesini ayrı bir satıra alır */
+    margin: 0 auto; /* Ortala */
+    font-size: 36px; /* Daha küçük bir boyut */
+    font-weight: 400; /* Daha ince font ağırlığı */
+    color: #888888; /* Beyaz renk */
+    line-height: 1.2; /* Dikey hizalama ayarı */
+}
+
+
+/* Career Section */
+.career-section {
+    position: relative; /* Butonun içinde doğru konumlanabilmesi için relative */
+    width: 1484px; /* Frame genişliği */
+    height: 252px; /* Frame yüksekliği */
+    margin: 0 auto; /* Ortala */
+    background-color: #000000; /* Siyah arka plan */
+    display: flex;
+    align-items: center; /* Metinlerin ortalanması */
+}
+/* Career Text */
+.career-text {
+    width: auto;
+    margin-left: 30px; /* Yazılar için ekstra boşluk */
+    color: #FFFFFF;
+}
+
+/* Career Text */
+.career-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; /* Başlık boyutu */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.career-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Alt yazı boyutu */
+    color: #888888; /* Gri renk */
+}
+
+/* Career Button */
+.career-button {
+    position: absolute;
+    top: 80.55px; /* Üstten 45px */
+    right: 179px; /* Sağdan 179px */
+    bottom: 116.13px; /* Alttan 126px */
+    left: auto; /* Soldan konum, sağa göre hizalama */
+}
+
+/* Career Button */
+.career-button .contact-btn {
+    display: inline-block;
+    width: 170px; /* Buton genişliği */
+    height: 70px; /* Buton yüksekliği */
+    background-color: #00FF00; /* Yeşil arka plan */
+    color: #FFFFFF; /* Beyaz yazı */
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px; /* Butonun ortalanması */
+    border-radius: 8px; /* Hafif köşeler */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    transition: background-color 0.3s ease;
+}
+
+.career-button .contact-btn:hover {
+    background-color: #008000; /* Hover durumunda koyu yeşil */
+}
+/* Footer Section */
+.footer {
+    position: relative;
+    width: 1507.33px;
+    height: 320.56px;
+    margin: 35.66px auto 0; /* Üstten boşluk ve ortalama */
+    background: #050507; /* Deep Dark */
+}
+
+/* Background */
+.footer-background {
+    position: absolute;
+    width: 1507.33px;
+    height: 320.56px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #050507;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 65.02px;
+    position: absolute;
+    width: 1235.88px;
+    height: 246.88px;
+    left: 135.73px;
+    top: 81.59px;
+}
+
+/* Footer Name */
+.footer-name {
+    width: 206px;
+    height: 27px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24.8602px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+/* Info Links */
+.info-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 442.7px;
+    width: 1059.7px;
+    height: 186.97px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24.86px;
+    width: 184px;
+    height: 186.97px;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24.86px;
+    width: 118px;
+    height: 143.11px;
+}
+
+.info-title, .social-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 19.1232px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.info-item, .social-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 15.2986px;
+    font-weight: 400;
+    color: #808080; /* Gray */
+}
+
+/* Line Separator */
+.footer-line {
+    width: 1070.9px;
+    border: 0.95616px solid #313131; /* Light Dark */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 1070.9px;
+    height: 16px;
+}
+
+.copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 13.3862px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
