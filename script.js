@@ -20,32 +20,47 @@ function scrollToHero() {
     const heroSection = document.getElementById("hero");
     heroSection.scrollIntoView({ behavior: "smooth" });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const overlay = document.querySelector('.nav-overlay');
-
-    menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
+    hamburger.addEventListener('click', () => {
+        // Toggle active class for hamburger animation
+        hamburger.classList.toggle('active');
+        // Toggle navigation menu
+        navLinks.classList.toggle('active');
     });
 
-    // Overlay'e tıklandığında menüyü kapat
-    overlay.addEventListener('click', function() {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-        overlay.classList.remove('active');
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
     });
 
-    // Menü linklerine tıklandığında menüyü kapat
-    const menuLinks = document.querySelectorAll('.nav-menu a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            overlay.classList.remove('active');
+    // Close menu when link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.journey-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+        
+        // Optional: Add keyboard accessibility
+        card.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                card.classList.toggle('flipped');
+            }
         });
     });
 });

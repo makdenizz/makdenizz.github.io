@@ -9,32 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    
     <!-- Header -->
     <header>
-        <nav>
-            <!-- Sol başlık -->
+        <nav class="navbar">
+            <!-- Logo/Site Title -->
             <a href="/" class="site-title">Mustafa Akdeniz</a>
     
-            <!-- Sağ menü -->
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-    
-            <!-- Hamburger menü (mobil için) -->
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#desktop-content">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#academic-journey">Projects & Academic Journey</a></li>
+                <li><a href="#career-section">Contact</a></li>
+            </ul>
         </nav>
     </header>
     
@@ -51,8 +45,8 @@
     </section>
     <section class="transition-section"></section>
 
-    <section id= "about-section" class="about-section">
-        <div class="about-content">
+    <section id= "desktop-content" >
+        <div class="desktop-content">
             <!-- Sol Kısım: Yazılar ve Butonlar -->
             <div class="about-text">
                 <h2>Hey, I'm Mustafa,<br>Student in Engineering!</h2>
@@ -81,41 +75,109 @@
             </div>
         </div>
     </section>
-        <!-- Geçiş Bölümü -->
+
+    <!-- Geçiş Bölümü -->
     <section class="transition-section"></section>
 
-    <!-- Academic Journey Section -->
-    <section id="academic-journey" class="academic-journey">
-        <div class="section-title">
-            <h2>Let’s go through my <br><span>Academic journey.</span></h2>
-        </div>
-        <div class="journey-cards">
-            <!-- İlk Kutu -->
-            <div class="journey-card">
-                <img src="assets\images\tubitak.JPG" alt="TUBITAK Project">
-                <div class="card-text">
-                    <p>2020</p>
-                    <h3>TUBITAK Project</h3>
-                </div>
-            </div>
-            <!-- İkinci Kutu -->
-            <div class="journey-card">
-                <img src="assets\images\teknofest.JPG" alt="TEKNOFEST Project">
-                <div class="card-text">
-                    <p>2021</p>
-                    <h3>TEKNOFEST Project</h3>
-                </div>
-            </div>
-            <!-- Üçüncü Kutu -->
-            <div class="journey-card">
-                <img src="assets\images\koc.JPG" alt="Koç University">
-                <div class="card-text">
-                    <p>2022</p>
-                    <h3>KOÇ University</h3>
+<!-- Mobil için içerik -->
+    <section id= "mobile-content" class="mobile-content">
+        <div class="mobile-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="image">
+                        <img src="assets\images\WhatsApp Görsel 2024-12-23 saat 15.14.21_7d01f80f.jpg" alt="Mustafa's Photo">
+                    </div>
+                    <div class="text-content">
+                        <h2>Hey, I'm Mustafa,<br>Student in Engineering!</h2>
+                        <p>
+                            I am 20 years old and currently in my second year of higher education. Research and computers 
+                            are my two greatest passions, and I have decided to turn these passions into my career journey.
+                        </p>
+                        <p>
+                            I always strive to be a good team member and work on improving the projects I try, 
+                            using them as tools for learning.
+                        </p>
+                        <p>
+                            With my curiosity for learning new things, I greatly enjoy exploring the latest technologies, ideas, 
+                            and the world of software. I continue to express myself in the realm of computers and coding by 
+                            constantly learning and growing.
+                        </p>
+                        <div class="about-buttons">
+                            <a href="https://github.com/makdenizz" target="_blank"><img src="assets\images\github\github-mark-white.png" alt="GitHub"></a>
+                            <a href="www.linkedin.com/in/mustafa-akdeniz-" target="_blank"><img src="assets\images\linkedin\LI-In-Bug.png" alt="LinkedIn"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+        <!-- Geçiş Bölümü -->
+    <section class="transition-section"></section>
+
+   <!-- Academic Journey Section -->
+<section id="academic-journey" class="academic-journey">
+    <div class="section-title">
+        <h2>Let's go through my <br><span>Academic journey.</span></h2>
+    </div>
+    <div class="journey-cards">
+        <!-- First Card -->
+        <div class="journey-card">
+            <div class="card-inner">
+                <!-- Front of Card -->
+                <div class="card-front">
+                    <img src="assets/images/tubitak.JPG" alt="TUBITAK Project">
+                    <div class="card-text">
+                        <p>2020</p>
+                        <h3>TUBITAK Project</h3>
+                    </div>
+                </div>
+                <!-- Back of Card -->
+                <div class="card-back">
+                    <p>
+                        The first project I ever prepared, Aidiyet Yer Çekimi Gibidir, was a project I developed together with a friend in 10th grade. With this project, which we worked on in the field of psychology, we achieved 3rd place in the İzmir Region in the TÜBİTAK competition. This project required research in many areas where I was not an expert, teaching me how to conduct systematic research and significantly improving my personal development. Through the inventories and scales we implemented in schools in the Nazilli district, I gained my first experiences in data collection and analysis. By creating a website for our project, I took my first step into the world of software. Additionally, the article we co-authored and the presentation we delivered as a team helped me understand the value of teamwork and collaboration. This project was the first experience where I both improved myself in teamwork and witnessed its results.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="journey-card">
+            <div class="card-inner">
+                <!-- Front of Card -->
+                <div class="card-front">
+                    <img src="assets/images/teknofest.JPG" alt="TEKNOFEST Project">
+                    <div class="card-text">
+                        <p>2021</p>
+                        <h3>TEKNOFEST Project</h3>
+                    </div>
+                </div>
+                <!-- Back of Card -->
+                <div class="card-back">
+                    <p>While my teammate worked on the system's electronic infrastructure, I focused on addressing the communication issues that arise during earthquakes when telecommunication infrastructure is damaged and phone communication becomes impossible. Recognizing that internet communication is often used in such cases, I contributed to the development of a system that utilized wi-fi networks to transmit a building's motion, temperature, and location data to a server and an internet site created with HTML. Thanks to my teammate, this was the first engineering project I was fully involved in, and it helped me deeply understand the importance of teamwork and division of labor. This project, which advanced to the national finals in Turkey, significantly enhanced my engineering skills and my ability to think like an engineer and a team player.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="journey-card">
+            <div class="card-inner">
+                <!-- Front of Card -->
+                <div class="card-front">
+                    <img src="assets/images/koc.JPG" alt="Koç University">
+                    <div class="card-text">
+                        <p>2022</p>
+                        <h3>KOÇ University</h3>
+                    </div>
+                </div>
+                <!-- Back of Card -->
+                <div class="card-back">
+                    <p>Thanks to two projects I contributed to in high school, I was accepted into Koç University's Computer Engineering program with a special scholarship, taking a significant step toward becoming an engineer at one of Turkey’s top universities. With Koç University's discipline, vision, and education, I began to elevate my skills.
+
+                        Beyond engineering, I focused on developing my social skills by joining the university's largest career club. Over 2.5 years, I rose to vice president, leading a dynamic team of 200 members and fostering collaboration across departments. I contributed to high-impact events like Business Trip and Best Practice Summit, engaging top-level executives and creating valuable networking opportunities. This experience greatly enhanced my communication, leadership, and teamwork abilities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Siyah Geçiş Bölümü -->
 
 <!-- Skills Section -->
@@ -156,21 +218,6 @@
 <!-- Geçiş Bölümü -->
 <section class="transition-section"></section>
 
-<!-- Projects Section -->
-<section id="projects-section" class="projects-section">
-    <div class="projects-title">
-        <h2>
-            Discover my recents projects of 
-            <span>websites</span>, 
-            <span>High School</span>
-            <br>
-            <span class="and-word">and</span> 
-            <span>Games</span>.
-        </h2>
-    </div>
-</section>
-<!-- Geçiş Bölümü -->
-<section class="transition-section"></section>
 
 <!-- Career Opportunity Section -->
 <section id="career-section" class="career-section">
